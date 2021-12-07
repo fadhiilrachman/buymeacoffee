@@ -25,7 +25,7 @@ const checkConnectedWallet = async () => {
         if (accounts.length !== 0) {
             const account = accounts[0];
             setCurrentAccount(account);
-                toast.success("☕️ Wallet berhasil Terkoneksi", {
+                toast.success("☕️ Wallet berhasil terkoneksi", {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -239,7 +239,7 @@ return (
             <h1 className="text-6xl font-bold text-yellow-800 mb-6">
                 Buy Me A Coffee ☕️
             </h1>
-
+            
             {
                 currentAccount ? (
                     <div className="w-full max-w-xs sticky top-3 z-50 ">
