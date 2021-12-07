@@ -7,7 +7,7 @@ import Head from "next/head";
 import abi from "../utils/BuyMeACoffee.json";
 
 export default function Home() {
-const contractAddress = "";
+const contractAddress = "0xd9198Ff3fd394754d8B4dba22aa5a7ba657cE51E";
 
 const contractABI = abi.abi;
 
