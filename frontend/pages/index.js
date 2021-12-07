@@ -7,7 +7,7 @@ import Head from "next/head";
 import abi from "../utils/BuyMeACoffee.json";
 
 export default function Home() {
-const contractAddress = "0xd9198Ff3fd394754d8B4dba22aa5a7ba657cE51E";
+const contractAddress = "";
 
 const contractABI = abi.abi;
 
@@ -239,7 +239,7 @@ return (
             <h1 className="text-6xl font-bold text-yellow-800 mb-6">
                 Buy Me A Coffee ☕️
             </h1>
-            
+
             {
                 currentAccount ? (
                     <div className="w-full max-w-xs sticky top-3 z-50 ">
