@@ -35,7 +35,7 @@ const checkConnectedWallet = async () => {
                 progress: undefined
             });
         } else {
-            toast.warn("Pastikan MetaMask kamu sudah terkoneksi", {
+            toast.warn("Pastikan Wallet sudah diinstal", {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
