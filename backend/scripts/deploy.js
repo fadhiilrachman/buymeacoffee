@@ -9,12 +9,12 @@ const main = async () => {
     console.log("Account balance: ", accountBalance.toString());
 
     const Token = await hre.ethers.getContractFactory("BuyMeACoffee");
-    const portal = await Token.deploy({
+    const kopi = await Token.deploy({
         value: hre.ethers.utils.parseEther("0.1")
     });
-    await portal.deployed();
+    await kopi.deployed();
 
-    console.log("BuyMeACoffee address: ", portal.address);
+    console.log("BuyMeACoffee address: ", kopi.address);
 };
 
 const runMain = async () => {

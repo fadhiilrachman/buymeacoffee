@@ -2,23 +2,23 @@
 const hre = require("hardhat");
 
 const main = async () => {
-    const coffeeContractFactory = await hre.ethers.getContractFactory("BuyMeACoffee");
-    const coffeeContract = await coffeeContractFactory.deploy({
+    const kopiContractFactory = await hre.ethers.getContractFactory("BuyMeACoffee");
+    const kopiContract = await kopiContractFactory.deploy({
         value: hre.ethers.utils.parseEther("0.1")
     });
 
-    await coffeeContract.deployed();
-    console.log("Coffee Contract deployed to:", coffeeContract.address);
+    await kopiContract.deployed();
+    console.log("Coffee Contract deployed to:", kopiContract.address);
 
     let contractBalance = await hre.ethers.provider.getBalance(
-        coffeeContract.address
+        kopiContract.address
     );
     console.log(
         "Contract balance:",
         hre.ethers.utils.formatEther(contractBalance)
     );
 
-    const coffeeTxn = await coffeeContract.buyCoffee(
+    const coffeeTxn = await kopiContract.buyCoffee(
         "Kupi nomor wahid #1",
         "fadil",
         ethers.utils.parseEther("0.001")
@@ -26,14 +26,14 @@ const main = async () => {
     await coffeeTxn.wait();
 
     contractBalance = await hre.ethers.provider.getBalance(
-        coffeeContract.address
+        kopiContract.address
     );
     console.log(
         "Contract balance:",
         hre.ethers.utils.formatEther(contractBalance)
     );
 
-    let getSemuaKopi = await coffeeContract.getAllCoffee();
+    let getSemuaKopi = await kopiContract.getAllCoffee();
     console.log(getSemuaKopi);
 };
 
